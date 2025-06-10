@@ -1,53 +1,57 @@
 <template>
-  <label :for="id" :class="classes">
-    <input :disabled="disabled" :id="`answer${index}`" type="radio" name="answer" :value="value" @change="onchange" v-model="model">
+  <label :for="id" :class="computedClasses">
+    <input
+        :disabled="disabled"
+        :id="id"
+        type="radio"
+        :name="name"
+        :value="value"
+        :checked="modelValue === value"
+        @change="onchange"
+    />
     {{ value }}
   </label>
 </template>
 
-
-<script>
-import {computed} from "vue";
-import classes from "*.module.css";
-import {defineComponent} from "vue";
-
-export default defineComponent({
-  computed: {
-    classes() {
-      return classes
-    }
-  }
-})
+<script setup>
+import { computed } from 'vue'
 
 const props = defineProps({
   id: String,
+  name: String,
   disabled: Boolean,
   value: String,
-  correctAnswer: String
-
+  correctAnswer: String,
+  modelValue: String
 })
-const emits = defineEmits(['change'])
+
+const emits = defineEmits(['change', 'update:modelValue'])
+
 const onchange = (event) => {
   emits('change', event)
+  emits('update:modelValue', event.target.value)
 }
-const model = defineModel()
-const classes = computed(() => ({
+
+const computedClasses = computed(() => ({
   disabled: props.disabled,
   right: props.disabled && props.value === props.correctAnswer,
-  wrong: props.disabled && props.value !== props.correctAnswer && model.value === props.value
+  wrong:
+      props.disabled &&
+      props.value !== props.correctAnswer &&
+      props.modelValue === props.value
 }))
 </script>
 
 <style>
 .disabled {
-  opacity: .5;
+  opacity: 0.5;
 }
 .right {
-  opacity: 1;
   color: green;
+  font-weight: bold;
 }
 .wrong {
-  opacity: 1;
   color: red;
+  font-weight: bold;
 }
 </style>
