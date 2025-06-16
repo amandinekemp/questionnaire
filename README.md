@@ -8,15 +8,15 @@ et le résultat est présenté à la fin avec un message personnalisé selon le 
 
 ## ➤ Table des matières
 
-- [➤ Technologies utilisées]()
-- [➤ Lancer le projet]()
-- [➤ Contenu du fichier quiz.json]()
-- [➤ Fonctionnalités]()
-- [➤ Composants clés]()
-- [➤ Astuces de développement]()
-- [➤ License]()
-- [➤ Aperçu]()
-- [➤ Contact]()
+- [➤ Technologies utilisées](https://github.com/amandinekemp/questionnaire#-technologies-utilis%C3%A9es)
+- [➤ Lancer le projet](https://github.com/amandinekemp/questionnaire#-lancer-le-projet)
+- [➤ Contenu du fichier quiz.json](https://github.com/amandinekemp/questionnaire#-contenu-du-fichier-quizjson)
+- [➤ Fonctionnalités](https://github.com/amandinekemp/questionnaire#-fonctionnalit%C3%A9s)
+- [➤ Composants clés](https://github.com/amandinekemp/questionnaire#-composants-cl%C3%A9s)
+- [➤ Astuces de développement](https://github.com/amandinekemp/questionnaire#%EF%B8%8F-astuces-de-d%C3%A9veloppement)
+- [➤ License](https://github.com/amandinekemp/questionnaire#-licence)
+- [➤ Aperçu](https://github.com/amandinekemp/questionnaire#%EF%B8%8F-aper%C3%A7u)
+- [➤ Contact](https://github.com/amandinekemp/questionnaire#-contact)
 
 ## 🧱 Technologies utilisées
 
